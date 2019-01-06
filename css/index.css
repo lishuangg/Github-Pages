@@ -536,13 +536,23 @@ ul li{
 	top:324px;
 	background-color:#fd9a6e;
 }
+.suspension03 div{
+	width:40px;
+	height:85px;
+	background-image:url(../img/serwei.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
 .suspension04{
 	top:466px;
 }
-.serwei{
-	margin-left:12px;
-	margin-top:30px;
-}
 .suspension01:hover,.suspension02:hover,.suspension03:hover,.suspension04:hover{
 	width:123px;
+}
+.suspension03 div:hover{
+	width:123px;
+	background-image:url(../img/erwei.png);
+	background-repeat:no-repeat;
+	background-position:center;
+
 }

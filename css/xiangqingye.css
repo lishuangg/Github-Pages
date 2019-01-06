@@ -226,6 +226,7 @@ ul li{
 #fangdajing{
 	width:412px;
 	height:412px;
+	float:left;
 	position:relative;
 }
 #box_left{
@@ -250,7 +251,7 @@ ul li{
 }
 #box_right{
 	position:absolute;
-	left:412px;
+	left:410px;
 	top:0;
 	display:none; 
 	width:410px;
@@ -425,13 +426,13 @@ ul li{
 	background-color:#fff;
 	border:4px solid #aca9d3;
 }
-.btn_x{
+#btn_x{
 	padding:10px;
 	float:right;
 	border:none;
 	background-color:#fff;
 }
-.btn_jixu{
+#btn_jixu{
 	width:148px;
 	height:38px;
 	font-size:14px;
@@ -441,7 +442,7 @@ ul li{
 	background-color:#fff;
 	margin:0 30px;
 }
-.btn_jiesuan{
+#btn_jiesuan{
 	width:148px;
 	height:38px;
 	font-size:14px;

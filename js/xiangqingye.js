@@ -19,13 +19,13 @@ window.onload = function(){
 	var sp1 = document.getElementById("sp1");
 	var fangdajing = document.getElementById('fangdajing');
 	var center_white = document.getElementById('center-white');
-	sp0.onclick = function(){
+	sp0.onmouseover = function(){
 		sp0.style.cssText="border:2px solid #ff9003";
 		sp1.style.cssText="border:2px solid #fff";
 		Simg.setAttribute('src','../img/pp0.jpeg');
 		Bimg.setAttribute('src','../img/pp0.jpeg');
 	}
-	sp1.onclick = function(){
+	sp1.onmouseover = function(){
 		sp1.style.cssText="border:2px solid #ff9003";
 		sp0.style.cssText="border:2px solid #fff";
 		Simg.setAttribute('src','../img/pp1.jpeg');
@@ -55,15 +55,19 @@ window.onload = function(){
 		slider.style.left = oL+'px';
 		slider.style.top = oT+'px' ;
 
-		var oBmaxw = box_right.offsetWidth - Bimg.offsetWidth; //负值，是最大值
+		var oBmaxw = box_right.offsetWidth - Bimg.offsetWidth;
 		var oBmaxh = box_right.offsetHeight - Bimg.offsetHeight; 
-		// Bimg.style.cssText="left:" + ( oL/oMaxw ) * oBmaxw + 'px;top:' + ( oT/oMaxh ) * oBmaxh + 'px';
 		Bimg.style.left = ( oL/oMaxw ) * oBmaxw + 'px'
-		Bimg.style.top = ( oT/oMaxh ) * oBmaxh + 'px'
+		Bimg.style.top =( oT/oMaxh ) * oBmaxh + 'px'
+
+		// var sc =box_right.offsetHeight/Bimg.offsetHeight;
+		// 	Bimg.style.left='-'+oL*sc+'px';
+		// 	Bimg.style.top='-'+oT*sc+'px';
+
+
 		console.log(Bimg.style.left);
+		console.log(Bimg.style.top);
 	}
-
-
 
 	/*选择化妆品净含量*/
 	var ml150 = document.getElementById('xqp04_150ml');
@@ -98,24 +102,44 @@ window.onload = function(){
 	var num = number.value;
 	jian.onmouseover=function () {
 		jian.style.cursor="pointer";
+		if(num == 0){
+			jian.style.cursor="not-allowed";
+		}
 	}
 	jian.onclick = function(){
 		if(num>0){
 			number.value = --num;
+		}else{
+			jian.style.cursor="not-allowed";
 		}
 	}
 	jia.onmouseover=function () {
 		jia.style.cursor="pointer";
+		if(num == 5){
+			jia.style.cursor="not-allowed";
+		}
 	}
 	jia.onclick = function(){
 		if(num<5){
 			number.value = ++num;
+		}else{
+			jia.style.cursor="not-allowed";
 		}
 	}
 	/*加入购物车*/
 	var btn_gouwuche = document.getElementById('btn_gouwuche');
 	var bodybackground = document.getElementById('bodybackground');
+	var btn_x = document.getElementById('btn_x');
 	btn_gouwuche.onclick = function(){
 		bodybackground.style.display='block';
+	}
+	btn_x.onclick = function(){
+		bodybackground.style.display='none';
+	}
+	btn_jixu.onclick = function(){
+		bodybackground.style.display='none';
+	}
+	btn_jiesuan.onclick = function(){
+		bodybackground.style.display='none';
 	}
 }
